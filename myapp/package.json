@@ -1,7 +1,8 @@
 {
   "name": "myapp",
   "version": "0.1.0",
-  "private": true,
+   "private": true,
+  "homepage": "https://ahjama31.github.io/FirstProject/",
   "dependencies": {
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.9.1",
