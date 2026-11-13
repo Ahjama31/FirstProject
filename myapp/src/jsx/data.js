@@ -112,7 +112,7 @@ export const expertise = [
     ],
   },
   {
-    title: "Software engineering",
+    title: "Software engineer",
     tag: "Software",
     intro:
       "Designing and building reliable programs using object-oriented principles, planning first and testing throughout.",
