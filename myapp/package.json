@@ -1,19 +1,22 @@
 {
   "name": "myapp",
   "version": "0.1.0",
-   "private": true,
-  "homepage": "https://ahjama31.github.io/FirstProject/",
+  "private": true,
+  "homepage": "http://ahjama31.github.io/FirstProject/",
   "dependencies": {
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.3.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deplot": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
