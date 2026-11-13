@@ -1,0 +1,141 @@
+.experience-section {
+  background: var(--bg-2);
+}
+
+.timeline {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* The vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 220px;
+  width: 2px;
+  background: linear-gradient(var(--accent), var(--accent-2), transparent);
+}
+
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  padding-bottom: 36px;
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__dot {
+  position: absolute;
+  left: 220px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  margin-left: -7px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  border: 3px solid var(--accent);
+}
+
+.timeline__period {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  padding-right: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.timeline__badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  color: var(--text-3);
+}
+
+.timeline__badge--education {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.timeline__card {
+  margin-left: 40px;
+  padding: 26px 28px;
+  border-radius: 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.timeline__card:hover {
+  transform: translateX(6px);
+  border-color: var(--accent);
+}
+
+.timeline__card h3 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.timeline__place {
+  display: block;
+  margin: 4px 0 14px;
+  font-weight: 600;
+  color: var(--text-3);
+}
+
+.timeline__card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-2);
+}
+
+.timeline__card li + li {
+  margin-top: 6px;
+}
+
+.timeline__card li::marker {
+  color: var(--accent);
+}
+
+/* Phones & tablets: line moves to the left edge */
+@media (max-width: 720px) {
+  .timeline::before,
+  .timeline__dot {
+    left: 7px;
+  }
+
+  .timeline__item {
+    grid-template-columns: 1fr;
+    padding-left: 36px;
+  }
+
+  .timeline__period {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 0 10px;
+    text-align: left;
+  }
+
+  .timeline__card {
+    margin-left: 0;
+    padding: 22px;
+  }
+}

@@ -1,0 +1,107 @@
+.about {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(36px, 6vw, 72px);
+  align-items: start;
+}
+
+.about__text p {
+  margin: 0 0 22px;
+  font-size: 1.12rem;
+  color: var(--text-2);
+}
+
+.about__text p:first-child {
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.about__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.about__side {
+  display: grid;
+  gap: 18px;
+}
+
+.about__facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.about__fact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.about__fact span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.about__fact strong {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.about__skills {
+  padding: 26px;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.about__skills h3 {
+  margin: 0 0 16px;
+  font-size: 1rem;
+}
+
+.about__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about__chips .chip {
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.about__chips .chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .about__facts {
+    grid-template-columns: 1fr;
+  }
+  .about__fact {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about__buttons .btn {
+    flex: 1;
+  }
+}
